@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#Written by David Wirth
+#Date: 2/6/15
+#Group: 28
+
+echo "Num files:"
+num=$( ls -alc | wc -l )
+num2=$(($num - 2))
+echo $num2

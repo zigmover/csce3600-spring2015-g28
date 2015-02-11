@@ -1,0 +1,10 @@
+if [ -z "$1" ]
+  then
+    echo "No argument supplied"
+    echo "Please enter UID"
+    exit 0
+fi
+success=" Logged In"
+error=" NOT Logged In"
+
+echo "$1 $error"

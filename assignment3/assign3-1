@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#Written by David Wirth
+#Date: 2/6/15
+#Group: 28
+
+if [ -z "$1" ]
+   then
+    echo "No argument supplied"
+    echo "Please enter UID"
+  else
+   success=" Logged In"
+   error=" NOT Logged In"
+
+   value=$( w | grep -iwc $1)	
+   if [ $value -eq 0 ]
+      then
+         echo "$1 $error"
+      else
+         echo "$1 $success"
+   fi
+fi
