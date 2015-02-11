@@ -11,12 +11,16 @@ int main(int argc, char *argv[], char *envp[])
     exit(1);
   }
 
+  printf("Num Arguments: %u\n",argc);
+
 
   FILE *bashFile = fopen(argv[1], "r");
    
-  char buf[256];
-  while (fgets(buf, sizeof buf, bashFile) != NULL)
-    printf("\"%s\"\n", buf);
+  char line[256];
+  while (fgets(line, sizeof line, bashFile) != NULL)
+    printf("%s\n", line);
+
+  //parse line
   
   /* Test reason for reaching NULL. */
   if (feof(bashFile))          /* if failure caused by end-of-file condition */
